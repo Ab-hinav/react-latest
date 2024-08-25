@@ -1,0 +1,15 @@
+
+GET http://localhost:3001/books
+Content-Type: application/json
+28 34 , 34 
+###
+
+send POST http://localhost:3001/books title=The Great Gatsby
+
+###
+
+send DELETE http://localhost:3001/books/1
+
+###
+
+send PUT http://localhost:3001/books/1 title=The Great Gatsby
