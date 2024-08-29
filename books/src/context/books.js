@@ -1,32 +1,32 @@
-import { createContext,useState } from 'react';
-import { getAllBooksDb, createBookDb, deleteBookDb ,editBookDb} from '../utils';
+import { createContext, useState, useCallback } from 'react';
+import { getAllBooksDb, createBookDb, deleteBookDb, editBookDb } from '../utils';
 
 const BooksContext = createContext();
 
 
-function Provider({children}){
+function Provider({ children }) {
 
     const [books, setBooks] = useState([]);
 
     const createBook = (title) => {
         const id = Math.floor(Math.random(5) * 1000);
-        
-        createBookDb(title,id).then((data) => {
+
+        createBookDb(title, id).then((data) => {
             console.log(data);
             const updatedBooks = [...books, { id: id, title }];
             setBooks(updatedBooks);
         });
     };
 
-    const fetchBooks = async() => {
+    const fetchBooks = useCallback(async () => {
         const data = await getAllBooksDb();
         setBooks(data);
-    };
+    }, []);
 
     const deleteBookById = (id) => {
-        
+
         deleteBookDb(id).then((data) => {
-        
+
             const updatedBooks = books.filter((book) => book.id !== id);
             setBooks(updatedBooks);
             console.log(id);
@@ -34,20 +34,20 @@ function Provider({children}){
     };
 
     const editBookById = (id, title) => {
-      editBookDb(id, title).then((data) => {
-        console.log(data);
+        editBookDb(id, title).then((data) => {
+            console.log(data);
 
-        const updatedBooks = books.map((book) => {
-          if (book.id === id) {
-            return { ...data };
-          }
-          return book;
+            const updatedBooks = books.map((book) => {
+                if (book.id === id) {
+                    return { ...data };
+                }
+                return book;
+            });
+            setBooks(updatedBooks);
         });
-        setBooks(updatedBooks);
-      });
     };
 
-    let value = {books,fetchBooks ,createBook, deleteBookById, editBookById};
+    let value = { books, fetchBooks, createBook, deleteBookById, editBookById };
 
     return (
         <BooksContext.Provider value={value}>
@@ -59,5 +59,5 @@ function Provider({children}){
 }
 
 
-export {Provider};
+export { Provider };
 export default BooksContext;
