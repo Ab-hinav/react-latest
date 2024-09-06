@@ -5,7 +5,9 @@ function Sidebar() {
     const links = [
         {label: 'Accordion', to: '/accordion'},
         {label: 'Button', to: '/button'},
-        {label: 'Dropdown', to: '/'}
+        {label: 'Dropdown', to: '/'},
+        {label: 'Model', to: '/model'},
+        {label: 'Table', to: '/table'}
     ]
 
     const {currentPath} = useNavigation();

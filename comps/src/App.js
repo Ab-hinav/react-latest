@@ -1,10 +1,12 @@
 
-import Link from "./components/Link";
 import AccordionPage from "./pages/AccordionPage";
 import ButtonPage from "./pages/ButtonPage";
 import DropdownPage from "./pages/DropdownPage";
 import Route from "./components/Route";
 import Sidebar from "./components/Sidebar";
+import ModelPage from "./pages/ModelPage";
+
+import TablePage from "./pages/TablePage";
 
 function App() {
 
@@ -16,6 +18,8 @@ function App() {
                 <Route path="/accordion"><AccordionPage /></Route>
                 <Route path="/button"><ButtonPage /></Route>
                 <Route path="/"><DropdownPage /></Route>
+                <Route path="/model"><ModelPage /></Route>
+                <Route path="/table"><TablePage/></Route>
             </div>
         </div>
     );
