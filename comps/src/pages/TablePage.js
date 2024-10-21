@@ -1,5 +1,4 @@
 import SortableTable from "../components/SortableTable";
-import Table from "../components/Table";
 
 export default function TablePage() {
 

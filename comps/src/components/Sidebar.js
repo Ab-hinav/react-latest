@@ -7,7 +7,8 @@ function Sidebar() {
         {label: 'Button', to: '/button'},
         {label: 'Dropdown', to: '/'},
         {label: 'Model', to: '/model'},
-        {label: 'Table', to: '/table'}
+        {label: 'Table', to: '/table'},
+        {label: 'Counter', to: '/counter'}
     ]
 
     const {currentPath} = useNavigation();
