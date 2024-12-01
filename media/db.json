@@ -15,12 +15,90 @@
     {
       "id": "f15d",
       "name": "Easter"
-    },
-    {
-      "id": "1fdd",
-      "name": "Johan"
     }
   ],
-  "albums": [],
-  "photos": []
+  "albums": [
+    {
+      "id": "85cde3ee-a56d-43a7-bcec-34a1fd011600",
+      "userId": "2",
+      "name": "Elegant Wooden Sausages"
+    },
+    {
+      "id": "9621f1a3-64f2-479d-9386-47d35edff130",
+      "userId": "3e12",
+      "name": "Generic Steel Soap"
+    },
+    {
+      "id": "5d6e0923-0e8b-4989-a1ff-39c04b7bf2c4",
+      "userId": "f15d",
+      "name": "Oriental Frozen Ball"
+    },
+    {
+      "id": "750a791f-11ce-4a1d-b9b4-a59c2ce255ab",
+      "userId": "922e",
+      "name": "Electronic Wooden Chicken"
+    },
+    {
+      "id": "eb49ee2a-a938-4072-903e-75db0968fa4e",
+      "userId": "2",
+      "name": "Modern Plastic Computer"
+    },
+    {
+      "id": "9890e66e-8e1f-4a2c-8fa3-8b51b343b56b",
+      "userId": "2",
+      "name": "Refined Concrete Chair"
+    },
+    {
+      "id": "a9f0f320-a6eb-4309-84e0-6c2ab138388e",
+      "userId": "2",
+      "name": "Oriental Plastic Bacon"
+    }
+  ],
+  "photos": [
+    {
+      "id": "58f6faeb-5dc5-498b-b2a8-d054cf1506b2",
+      "albumId": "85cde3ee-a56d-43a7-bcec-34a1fd011600",
+      "data": "https://loremflickr.com/150/150/abstract?lock=95724"
+    },
+    {
+      "id": "257c578e-6184-453b-9159-d136ea0d7dae",
+      "albumId": "85cde3ee-a56d-43a7-bcec-34a1fd011600",
+      "data": "https://loremflickr.com/150/150/abstract?lock=76661"
+    },
+    {
+      "id": "91910ddb-2939-4767-8d08-39d27aee218e",
+      "albumId": "9621f1a3-64f2-479d-9386-47d35edff130",
+      "data": "https://loremflickr.com/150/150/abstract?lock=63869"
+    },
+    {
+      "id": "cf55bce3-686f-44d6-a584-71593f8fb76e",
+      "albumId": "eb49ee2a-a938-4072-903e-75db0968fa4e",
+      "data": "https://loremflickr.com/150/150/abstract?lock=50603"
+    },
+    {
+      "id": "656761c2-b551-4b91-b4a1-8a61435ee407",
+      "albumId": "9621f1a3-64f2-479d-9386-47d35edff130",
+      "data": "https://loremflickr.com/150/150/abstract?lock=62047"
+    },
+    {
+      "id": "db02d570-477e-4469-b921-95722fd19686",
+      "albumId": "9621f1a3-64f2-479d-9386-47d35edff130",
+      "data": "https://loremflickr.com/150/150/abstract?lock=46287"
+    },
+    {
+      "id": "527f6d18-4a65-4e8d-a134-07d3f1f44ada",
+      "albumId": "eb49ee2a-a938-4072-903e-75db0968fa4e",
+      "data": "https://loremflickr.com/150/150/abstract?lock=2846"
+    },
+    {
+      "id": "f45ac2bf-8a30-46fb-b4a4-5eea5249c77c",
+      "albumId": "85cde3ee-a56d-43a7-bcec-34a1fd011600",
+      "data": "https://loremflickr.com/150/150/abstract?lock=79924"
+    },
+    {
+      "id": "af5a811a-8b2c-4537-860a-f38bb1be6ef4",
+      "albumId": "a9f0f320-a6eb-4309-84e0-6c2ab138388e",
+      "data": "https://loremflickr.com/150/150/abstract?lock=31314"
+    }
+  ]
 }

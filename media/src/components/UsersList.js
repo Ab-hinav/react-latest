@@ -8,15 +8,13 @@ import UserListItem from "./UserListItem";
 
 
 export default function UsersList() {
-
-    const [doFetchUsers, isLoadingUsers, loadingUsersError] = useThunk(fetchUsers);
+    const [doFetchUsers, isLoadingUsers, loadingUsersError] =
+        useThunk(fetchUsers);
     const [doAddUser, isCreatingUser, creatingUserError] = useThunk(addUser);
 
     const { data } = useSelector((state) => {
         return state.users;
     });
-
-
 
     useEffect(() => {
         doFetchUsers();
@@ -27,13 +25,9 @@ export default function UsersList() {
         doAddUser();
     };
 
-
-
     const renderUsers = () => {
         return data.map((user) => {
-            return (
-                <UserListItem user={user}></UserListItem>
-            );
+            return <UserListItem user={user}></UserListItem>;
         });
     };
 
@@ -41,7 +35,9 @@ export default function UsersList() {
         <div className="grid grid-cols-1 gap-2">
             <Skeleton times={4} className="h-10 w-full"></Skeleton>
         </div>
-    ) : renderUsers();
+    ) : (
+        renderUsers()
+    );
 
     if (loadingUsersError || creatingUserError) {
         renderedContent = loadingUsersError ? (
@@ -51,17 +47,13 @@ export default function UsersList() {
         );
     }
 
-
-
     return (
         <div className="p-2">
             <div className="flex items-center justify-between p-3">
-                <h2>List Of Users</h2>{' '}
-
-                <Button loading={isCreatingUser} onClick={() => handleAddUser()}>
+                <h2 className="font-extrabold text-4xl" >List Of Users</h2>{' '}
+                <Button className="font-bold rounded-md" loading={isCreatingUser} onClick={() => handleAddUser()}>
                     + Add User
                 </Button>
-
             </div>
             <div className="grid grid-cols-1 gap-2">{renderedContent}</div>
         </div>

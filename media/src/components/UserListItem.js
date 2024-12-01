@@ -10,7 +10,7 @@ function UserListItem({ user }) {
     const [doRemoveUser, isRemovingUser, removingUserError] = useThunk(removeUser);
 
 
-    const header = <><Button loading={isRemovingUser} onClick={() => doRemoveUser(user)}>
+    const header = <><Button className="rounded-md" loading={isRemovingUser} onClick={() => doRemoveUser(user)}>
         <GoTrashcan className="text-red-500"></GoTrashcan>
     </Button>
         <h2>{user.name}</h2>

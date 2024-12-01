@@ -1,6 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-import { pause } from "./commons";
 import { faker } from "@faker-js/faker";
 
 

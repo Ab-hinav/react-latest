@@ -2,9 +2,6 @@ import classNames from "classnames";
 
 
 
-
-
-
 function Skeleton({ times, className }) {
 
 
@@ -29,7 +26,7 @@ function Skeleton({ times, className }) {
     );
 
     const boxes = Array(times).fill(0).map((_, i) => {
-        return <div  key={i} className={outerClassNames}>
+        return <div key={i} className={outerClassNames}>
             <div className={innerClassNames}></div>
         </div>;
     });

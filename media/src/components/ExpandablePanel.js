@@ -7,7 +7,7 @@ function ExpandablePanel({ header, children }) {
     const [isExpanded, setIsExpanded] = useState(false);
 
 
-    return (<div className="w-full bg-gray-400 h-full rounded p-1 " >
+    return (<div className="w-full bg-white-400 h-full rounded p-1 border-2 border-black m-1" >
         <div className="flex items-center justify-between p-1" onClick={() => console.log('clicked')}>
             <div className="flex gap-2 items-center"  >
                 {header}
@@ -16,7 +16,7 @@ function ExpandablePanel({ header, children }) {
             {isExpanded ? <GoChevronDown className="text-blue-500"></GoChevronDown> : <GoChevronLeft className="text-blue-500"></GoChevronLeft>}
             </div>
         </div>
-        { isExpanded && <div className="p-2 border-t">
+        { isExpanded && <div className="p-2 border-t border-black">
             {children}
         </div>}
 
