@@ -53,7 +53,13 @@ export default function HomePage() {
 
     return (
         <div>
-            <h1 className="font-extrabold text-3xl ml-2 mb-2" >Home Page</h1>
+            <div className="flex flex-col items-center justify-center">
+                <h1 className="text-7xl font-bold mb-3">NPM Registry</h1>
+                <div className="m-3" >
+                    <p>A registry for Vite packages. Search for packages and view details.</p>
+                </div>
+            </div>
+
             {vitePackageDetail.state === "hasValue" && 
                 <div className="grid-cols-2 grid" >
                     { toRender(vitePackageDetail.contents)}

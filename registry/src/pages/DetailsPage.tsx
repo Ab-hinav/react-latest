@@ -43,7 +43,7 @@ export default function DetailsPage() {
 
     return (
         <div>
-            <h1>Details Page</h1>
+            <h1 className="text-2xl font-bold ml-2" >Details Page</h1>
             {packageDetailsResp.state === "hasValue" && renderedPackageData(packageDetailsResp.contents)}
         </div>
     )
