@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="/src/output.css" rel="stylesheet">
+  <script type="module" src="/src/main.ts"></script>
+  <!-- <script type="module" src="/src/contentScript.ts"></script> -->
+  <title>LinkedIn CRM</title>
+</head>
+
+<body class="bg-gray-100 text-gray-800 font-sans p-6">
+  <div class="max-w-2xl mx-auto bg-white shadow-xl rounded-xl p-8 space-y-8">
+    <header class="text-center">
+      <h1 class="text-4xl font-extrabold text-gray-900">LinkedIn CRM</h1>
+      <p class="text-md text-gray-600 mt-1">A mini CRM tool for managing LinkedIn contacts and messages</p>
+    </header>
+
+    <nav class="flex justify-center">
+      <a href="https://www.linkedin.com/" target="_blank" class="text-blue-600 hover:underline text-sm font-medium">
+        ↗ Go to LinkedIn
+      </a>
+    </nav>
+
+    <section>
+      <h2 class="text-xl font-semibold text-gray-700 border-b pb-2 mb-3">Messages Info</h2>
+      <div id="awaitingReply" class="text-sm text-gray-800">Awaiting Reply: Loading...</div>
+      <div id="requireResponse" class="text-sm text-gray-800 mt-1">Require Response: Loading...</div>
+
+    </section>
+
+    <section>
+      <h2 class="text-xl font-semibold text-gray-700 border-b pb-2 mb-3">Dashboard</h2>
+      <p class="text-sm text-gray-600 mb-4">Quickly add or view your LinkedIn contacts</p>
+      <div class="flex">
+        <button id="open_dashboard"
+          class="bg-blue-600 text-white text-sm px-4 py-2 rounded-md hover:bg-blue-700 transition shadow">
+          Go to Dashboard
+        </button>
+      </div>
+    </section>
+
+    <section>
+      <label class="flex items-center space-x-3">
+        <input type="checkbox" class="form-checkbox h-4 w-4 text-blue-600" />
+        <span class="text-sm text-gray-700">Toggle On/Off</span>
+      </label>
+    </section>
+  </div>
+</body>
+
+</html>

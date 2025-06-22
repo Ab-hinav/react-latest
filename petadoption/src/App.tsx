@@ -19,7 +19,7 @@ export type PetData = {
 function App() {
 
   const [petData, setPetData] = useState<PetData[]>([]);
-  console.log(...petData);
+
 
   return (
     <Router>
